@@ -1,0 +1,28 @@
+/* Equalizer Styles */
+.equalizer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+/* Reverb Control Styles */
+.reverb-control {
+    margin-bottom: 15px;
+}
+
+/* Drop Zone Styles */
+#dropZone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#dropZone.highlight {
+    border-color: blue;
+}
+
+/* Track Name */
+#trackName {
+    font-weight: bold;
+}
