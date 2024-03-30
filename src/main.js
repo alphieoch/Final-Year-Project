@@ -1,5 +1,16 @@
 const dropzone = document.getElementById('dropzone');
 const audioPlayer = document.getElementById('audioPlayer');
+const bassSlider = document.getElementById('bassSlider');
+const midSlider = document.getElementById('midSlider');
+const trebleSlider = document.getElementById('trebleSlider');
+const panSlider = document.getElementById('panSlider');
+
+let audioContext;
+let sourceNode;
+let bassFilter;
+let midFilter;
+let trebleFilter;
+let pannerNode;
 
 dropzone.addEventListener('dragover', (e) => {
     e.preventDefault();
@@ -15,15 +26,4 @@ dropzone.addEventListener('dragleave', (e) => {
 
 dropzone.addEventListener('drop', (e) => {
     e.preventDefault();
-    e.stopPropagation();
-    dropzone.style.backgroundColor = '';
-
-    const file = e.dataTransfer.files[0];
-    if (file.type.startsWith('audio/')) {
-        const fileURL = URL.createObjectURL(file);
-        audioPlayer.src = fileURL;
-        audioPlayer.style.display = 'block';
-    } else {
-        alert('Please drop an audio file.');
-    }
-});
+    e.stopPropaga
